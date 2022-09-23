@@ -13,7 +13,7 @@ const Users = () => {
               <div key={index}>
                 <hr />
                 <h4>{item.name}</h4>
-                <p>Phone: {item.phone}</p>
+                <p>Phone No: {item.phone}</p>
               </div>
             </>
           ))}

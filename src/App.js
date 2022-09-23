@@ -1,13 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
+import SignIn from './View/Auth/SignIn';
+import Home from './View/Home';
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/signin" exact element={<SignIn />} />
-        </Routes>
+        <Route path="/signin" exact component={SignIn} />
+        <ProtectedRoute exact path="/" component={Home} />
       </BrowserRouter>
     </>
   );
